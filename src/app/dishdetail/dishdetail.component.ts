@@ -30,3 +30,14 @@ export class DishdetailComponent implements OnInit {
   }
 
 }
+
+var obj = [
+  {
+    title: 'Domestic', 
+    data:[
+      {title:"All Request", data : [{id: 9, count: 2}, {id:10, count: 8}]},
+      {title:"Approved", data : [{id: 9, count: 8}, {id:10, count: 3}]},
+      {title:"Rejected", data : [{id: 9, count: 4}, {id:10, count: 3}]}
+      ]
+  }
+  ]
