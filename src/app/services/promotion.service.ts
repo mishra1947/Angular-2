@@ -6,16 +6,25 @@ import { PROMOTIONS } from '../shared/promotions';
 export class PromotionService {
 
   constructor() { }
-   getPromotions() : Promotion []{
-     return PROMOTIONS;
+   getPromotions() : Promise<Promotion []>{
+     return new Promise(resolve=>{
+       setTimeout(() => resolve(PROMOTIONS), 2000);
+     });
+     //return  Promise.resolve(PROMOTIONS);
    }
 
-   getPromotion(id:number): Promotion {
-     return PROMOTIONS.filter((promotion)=>(promotion.id === id))[0];
+   getPromotion(id:number): Promise<Promotion> {
+     return new Promise(resolve=>{
+       setTimeout(() => resolve(PROMOTIONS.filter(promotion => (promotion.id === id))), 2000);
+     });
+     //return  Promise.resolve(PROMOTIONS.filter((promotion)=>(promotion.id === id))[0]);
    }
 
-   getFeaturedPromotion(): Promotion {
-     return PROMOTIONS.filter((promotion)=>(promotion.featured))[0];
+   getFeaturedPromotion(): Promise<Promotion> {
+      return new Promise(resolve=>{
+       setTimeout(() => resolve(PROMOTIONS.filter((promotion)=>(promotion.featured))[0]), 2000);
+     });
+     ///return  Promise.resolve(PROMOTIONS.filter((promotion)=>(promotion.featured))[0]);
    }
 
 }

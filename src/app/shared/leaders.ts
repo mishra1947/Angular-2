@@ -30,7 +30,7 @@ export const LEADER:Leader[] = [
     },
     {
       id: 3,
-      name: 'Alberto Somayya',
+      name: 'Shivam Mishra',
       image: '/assets/images/alberto.png',
       designation: 'Executive Chef',
       abbr: 'EC',
